@@ -5,7 +5,7 @@ python:
 install:
   - pip install numpy==1.5.1 Cython==0.17
   - pip install cogent==1.5.3
-  - pip install ftp://thebeast.colorado.edu/pub/biom-format-releases/biom-format-1.1.2.tar.gz
+  - pip install https://github.com/biocore/biom-format/archive/1.1.2.tar.gz
   - pip install .
 script:
   - python tests/all_tests.py
