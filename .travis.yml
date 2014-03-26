@@ -5,7 +5,10 @@ python:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get -qq install r-base
-  - sudo Rscript -e 'install.packages("ape", dep=TRUE, repos="http://cran.r-project.org")'
+  - wget http://cran.r-project.org/src/contrib/gee_4.13-18.tar.gz -O gee.tar.gz
+  - wget http://cran.r-project.org/src/contrib/Archive/ape/ape_3.0.tar.gz -O ape.tar.gz
+  - R CMD INSTALL gee.tar.gz
+  - R CMD INSTALL ape.tar.gz
 install:
   - pip install numpy==1.5.1 Cython==0.17
   - pip install cogent==1.5.3
